@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fd9274c81a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Notes.css"/>
+</head>
+
+<body> 
+    <div class="home-page" id="homePage">
+        <!--Navbar-->
+        <nav class="nav-container fixed-top">
+            <h1 class="text-left nav-logo">Notes</h1>
+            <div class="d-flex flex-row justify-content-end icons-container" id="iconContainer">
+                <input type="search" class="search-input d-none d-md-block" placeholder="Search for a note" />
+                <button class="icon" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon" id="addNoteBtn" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="banner-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="sidebar-container col-md-3 col-lg-2 d-md-block d-none shadow" id="sidebarContainer">
+                        <div class="tab-container d-flex flex-row">
+                            <button class="side-icon shadow-sm" id="homeBtn">
+                                <i class="fa-solid fa-house"></i>
+                            </button>
+                            <label class="side-tab" for="homeBtn">Home</label>
+                        </div>
+                        <div class="tab-container d-flex flex-row">
+                            <button class="side-icon note-icon shadow-sm" id="noteBtn">
+                                <i class="fa-solid fa-note-sticky"></i>
+                            </button>
+                            <label class="side-tab" for="noteBtn">Notes</label>
+                        </div>
+                        <div class="tab-container d-flex flex-row">
+                            <button class="side-icon shadow-sm" id="deleteBtn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                            <label class="side-tab" for="deleteBtn">Trash</label>
+                        </div>
+                    </div>
+
+                    <div class="banner col-md-9 d-none d-md-block" id="bannerContainer">
+                        <div class="row p-2">
+                            <div class="col-md-5 note-card mb-2">
+                                <h3 class="card-heading">Contacts :</h3>
+                                <h6 class="card-note">+91 9182347182<br>+91 9232357182<br>+91 9132346112<br>+91 8182245182</h6>
+                            </div>
+                            <div class="col-md-5 note-card">
+                                <h3 class="card-heading">Email :</h3>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-md-5 note-card mb-2">
+                                <h3 class="card-heading">Contacts :</h3>
+                                <h6 class="card-note">+91 9182347182<br>+91 9232357182<br>+91 9132346112<br>+91 8182245182</h6>
+                            </div>
+                            <div class="col-md-5 note-card">
+                                <h3 class="card-heading">Email :</h3>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-md-5 note-card mb-2">
+                                <h3 class="card-heading">Contacts :</h3>
+                                <h6 class="card-note">+91 9182347182<br>+91 9232357182<br>+91 9132346112<br>+91 8182245182</h6>
+                            </div>
+                            <div class="col-md-5 note-card">
+                                <h3 class="card-heading">Email :</h3>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                                <h6 class="card-note">notes@gmail.com</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-md-none">
+            <div class="row">
+                <div class="banner-1 col-12 d-flex flex-row justify-content-center w-100 w-sm-25">
+                    <img class="img" src="https://i.ibb.co/ZYtQqtp/Untitled-Export-V1.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <div class="container-fluid">
+            <div class="row fixed-bottom bottom-container d-md-none">
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="footerHomeBtn">
+                        <i class="fa-solid fa-house"></i>
+                        <h1 class="bottom-text">Home</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="footerNoteBtn">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <h1 class="bottom-text mt-0">Notes</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="footerDeleteBtn">
+                        <i class="fas fa-trash-alt"></i>
+                        <h1 class="bottom-text">Trash</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-container">
+                <div class="d-flex flex-row justify-content-end">
+                    <button type="button" id="cross" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <h1 class="modal-heading">Note</h1>
+                <div class="modal-body">
+                    <div class="note-enter-container shadow-sm">
+                        <div class="d-flex flex-column mb-3">
+                            <label class="label ml-2">Title:</label>
+                            <input type="text" id="title" class="input shadow-sm" />
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label class="label ml-2">My Note:</label>
+                            <input type="text" id="note" class="input note-input shadow-sm" />
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-end">
+                        <button type="button" class="save-btn" id="saveBtn" data-dismiss="modal" aria-label="Close">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Second page-->
+    <div class="notes-page d-none" id="notesPage">
+        <!--Navbar-->
+        <nav class="nav-container fixed-top" id="navbar">
+            <h1 class="text-left nav-logo">Notes</h1>
+            <div class="d-flex flex-row justify-content-end icons-container" id="iconContainer">
+                <input type="search" class="search-input d-none d-md-block" placeholder="Search for a note" />
+                <button class="icon" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </nav>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar-container col-md-3 col-lg-2 d-md-block d-none shadow" id="sidebarContainer">
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon shadow-sm" id="noteHomeBtn">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
+                        <label class="side-tab" for="noteHomeBtn">Home</label>
+                    </div>
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon note-icon shadow-sm" id="noteNoteBtn">
+                            <i class="fa-solid fa-note-sticky"></i>
+                        </button>
+                        <label class="side-tab" for="noteNoteBtn">Notes</label>
+                    </div>
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon shadow-sm" id="noteDeleteBtn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <label class="side-tab" for="noteDeleteBtn">Trash</label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img class="empty-note-img d-none" id="emptyNoteImg" src="https://i.ibb.co/fH3MhnJ/empty-Note-removebg-preview-V1.jpg" />
+                </div>
+                <div class="col-md-9 note-date-container" id="notesBannerContainer"></div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row fixed-bottom bottom-container d-md-none">
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="notesFooterHomeBtn">
+                        <i class="fa-solid fa-house"></i>
+                        <h1 class="bottom-text">Home</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="footerNoteBtn">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <h1 class="bottom-text mt-0">Notes</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="noteFooterDeleteBtn">
+                        <i class="fas fa-trash-alt"></i>
+                        <h1 class="bottom-text">Trash</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-note-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-flex flex-row justify-content-center w-100 row">
+                    <div id="noteContainer" class="note-container col-10 col-md-8 col-lg-6 d-none">
+                        <div class="d-flex flex-row justify-content-end">
+                            <button class="note-close" id="noteCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <h1 class="note-heading">Note</h1>
+                        <hr class="line">
+                        <div class="note-box d-flex flex-row w-100">
+                            <div class="d-flex flex-column justify-content-start w-100">
+                                <h1 class="note-title">Title: </h1>
+                                <h1 class="title-name" id="noteTitle"></h1>
+                                <input id="titleInput" class="edit-input d-none" type="text" />
+                                <hr class="line-2">
+                                <h3 class="note-title">Note: </h3>
+                                <h2 class="title-name note" id="noteNote"></h2>
+                                <input id="noteInput" class="edit-input d-none" type="text" />
+                                <hr class="line-2">
+                            </div>
+                            <div class="icon-container d-flex flex-row justify-content-end">
+                                <div class="d-flex flex-row justify-content-end">
+                                    <button class="edit-icon" id="editIcon"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-icon" id="noteDelete"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <div class="edit-btn d-flex flex-column justify-content-end">
+                                    <button class="save-btn-1 d-none" id="editNoteSave">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--Trash Container-->
+
+    <div class="trash-page d-none" id="trashPage">
+        <nav class="nav-container fixed-top" id="navbar">
+            <h1 class="text-left nav-logo">Notes</h1>
+            <div class="d-flex flex-row justify-content-end icons-container" id="iconContainer">
+                <input type="search" class="search-input d-none d-md-block" placeholder="Search for a note" />
+                <button class="icon" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar-container col-md-3 col-lg-2 d-md-block d-none shadow" id="sidebarContainer">
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon shadow-sm" id="trashHomeBtn">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
+                        <label class="side-tab" for="trashHomeBtn">Home</label>
+                    </div>
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon note-icon shadow-sm" id="trashNoteBtn">
+                            <i class="fa-solid fa-note-sticky"></i>
+                        </button>
+                        <label class="side-tab" for="trashNoteBtn">Notes</label>
+                    </div>
+                    <div class="tab-container d-flex flex-row">
+                        <button class="side-icon shadow-sm" id="trashDeleteBtn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <label class="side-tab" for="trashDeleteBtn">Trash</label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img class="empty-note-img d-none" id="emptyTrashImg" src="https://i.ibb.co/7QXrzh3/empty-trash-img.png"/>
+                </div>
+                
+                <div class="col-md-9 note-date-container" id="deletedNotesContainer"></div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row fixed-bottom bottom-container d-md-none">
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="trashFooterHomeBtn">
+                        <i class="fa-solid fa-house"></i>
+                        <h1 class="bottom-text">Home</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="trashFooterNoteBtn">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <h1 class="bottom-text mt-0">Notes</h1>
+                    </button>
+                </div>
+                <div class="tab-container col-4">
+                    <button class="bottom-icon" id="trashFooterDeleteBtn">
+                        <i class="fas fa-trash-alt"></i>
+                        <h1 class="bottom-text">Trash</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Notes.js"></script>
+</body>
+
+</html>

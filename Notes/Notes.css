@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lobster&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.home-container {
+    background-color: rgb(239, 239, 239);
+    height: 100vh;
+}
+
+.nav-container {
+    background-color: rgb(63, 7, 50);
+    padding: 10px;
+    height: 80px;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-family: "Dancing Script";
+    font-size: 45px;
+}
+
+.icons-container {
+    margin-top: -55px;
+}
+
+.icon {
+    background-color: rgb(63, 2, 50);
+    border: 0px rgb(63, 2, 67);
+    color: white;
+    font-size: 22px;
+    margin-right: 12px;
+    height: 45px;
+    width: 45px;
+    margin-top: 2px;
+}
+
+.icon:hover {
+    background-color: rgb(243, 227, 230);
+    color: rgb(42, 41, 41);
+    border-radius: 50%;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+.search-input {
+    height: 38px;
+    width: 200px;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-right: 28px;
+    padding-left: 15px;
+    border-width: 0px;
+}
+
+.img {
+    width: 100%;
+    height: 70%;
+    margin-top: 20px;
+}
+
+.sidebar-container {
+    background-color: rgb(243, 227, 230);
+    height: 100vh;
+    padding-top: 25px;
+    padding-left: 38px;
+    padding-right: 20px;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 1;
+}
+
+.side-icon {
+    background-color: rgb(243, 227, 230);
+    border: 0px;
+    color: rgb(63, 3, 67);
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.side-icon:hover {
+    background-color: rgb(63, 3, 67);
+    color: #ffffff;
+}
+
+.side-tab {
+    font-size: 20px;
+    color: rgb(63, 3, 67);
+    margin-top: 16px;
+    margin-left: 6px;
+    font-family: "Roboto Slab";
+    font-weight: 500;
+}
+
+.side-icon:hover {
+    background-color: rgb(63, 3, 67);
+    color: #ffffff;
+}
+
+.tab-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-section {
+    background-color: rgb(239, 239, 239);
+}
+
+.banner {
+    padding-top: 100px;
+    background-color: rgb(239, 239, 239);
+    height: 100vh;
+    margin-left: 190px;
+    padding-left: 40px;
+}
+
+.banner-1 {
+    background-color: rgb(243, 227, 230);
+    padding-top: 80px;
+    height: 100vh;
+}
+
+.note-card {
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 15px;
+    margin-right: 10px;
+    color: rgb(180, 180, 180);
+}
+
+.card-heading {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-note {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.bottom-container {
+    background-color: rgb(63, 2, 50);
+    height: 80px;
+    padding-top: 8px;
+}
+
+.bottom-icon {
+    background-color: rgb(63, 2, 50);
+    border: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.bottom-text {
+    font-size: 18px;
+    font-family: "roboto";
+}
+
+#cross {
+    float: right;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color:rgb(63, 2, 67);
+    background-color: rgb(246, 223, 227);
+    border: 0px;
+    font-size: 35px;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 223, 227);
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.notes-heading-container {
+    margin-bottom: 0px;
+}
+
+.modal-heading {
+    color: rgb(99, 51, 102);
+    font-size: 28px;
+    font-family: "Roboto";
+    font-weight: 550;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.note-enter-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 245px;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-size: 20px;
+    color: rgb(99, 51, 102);
+    font-family: "Roboto";
+    font-weight: 550;
+    margin-left: 4px;
+}
+
+.input {
+    border: 0px solid;
+    background-color: rgb(243, 220, 224);
+    border-radius: 10px;
+    height: 50px;
+    color: rgb(37, 2, 40);
+    padding: 10px;
+    outline-color: rgb(99, 51, 102);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.note-input {
+    height: 53px;
+}
+
+.save-btn {
+    background-color: transparent;
+    border: 1.5px solid rgb(37, 2, 40);
+    border-radius: 10px;
+    padding: 4px;
+    width: 65px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Roboto";
+    margin-top: 5px;
+}
+
+.save-btn:hover {
+    background-color: rgb(37, 2, 40);
+    color: #ffffff;
+    width: 65px;
+}
+
+.notes-page {
+    height: 100%;
+    background-color: rgb(239, 239, 239);
+    min-height: 600px;
+}
+
+@media screen and (max-width: 575px) {
+    .empty-note-img {
+        padding-top: 100px;
+        padding-bottom: 0px;
+        width: 300px;
+        height: 380px;
+        position: fixed;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .empty-note-img {
+        padding-top: 100px;
+        padding-bottom: 0px;
+        width: 460px;
+        height: 400px;
+        position: fixed;
+    }
+}
+
+.note-date-container {
+    height: 100%;
+    margin-top: 80px;
+    background-color: rgb(239, 239, 239);
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .note-date-container {
+        margin-left: 200px;
+    }
+
+    .empty-note-img {
+        padding-left: 200px;
+        padding-top: 84px;
+        padding-bottom: 0px;
+        width: 640px;
+        height: 550px;
+        position: fixed;
+    }
+    .note-date {
+        position: absolute;
+        color: rgb(63, 3, 67);
+        z-index: 999;
+        margin-left: -60px;
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .note-day {
+        position: absolute;
+        z-index: 999;
+        color: rgb(63, 3, 67);
+        margin-top: 32px;
+        margin-right: 60px;
+        font-size: 16px;
+    }
+    
+    .note-year {
+        position: absolute;
+        z-index: 999;
+        margin-top: 52px;
+        margin-left: -58px;
+        color: rgb(63, 3, 67);
+        font-size: 16px;
+    }
+    .time {
+        padding-top: 35px;
+        font-size: 14px;
+        text-align: right;
+        margin-left: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .note-date-container {
+        margin-left: 165px;
+    }
+
+    .empty-note-img {
+        padding-left: 200px;
+        padding-top: 84px;
+        padding-bottom: 0px;
+        width: 640px;
+        height: 550px;
+        position: fixed;
+    }
+    .note-date {
+        position: absolute;
+        color: rgb(63, 3, 67);
+        z-index: 999;
+        margin-left: -48px;
+        margin-top: 40px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .note-day {
+        position: absolute;
+        z-index: 999;
+        color: rgb(63, 3, 67);
+        margin-top: 40px;
+        margin-right: 46px;
+        font-size: 16px;
+    }
+    
+    .note-year {
+        position: absolute;
+        z-index: 999;
+        margin-top: 79px;
+        margin-left: -48px;
+        color: rgb(63, 3, 67);
+        font-size: 16px;
+    }
+    .time {
+        padding-top: 35px;
+        font-size: 14px;
+        text-align: right;
+        margin-left: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .note-date-container {
+        margin-left: 200px;
+    }
+
+    .empty-note-img {
+        padding-left: 200px;
+        padding-top: 84px;
+        padding-bottom: 0px;
+        width: 640px;
+        height: 550px;
+        position: fixed;
+    }
+    .note-date {
+        position: absolute;
+        color: rgb(63, 3, 67);
+        z-index: 999;
+        margin-left: -60px;
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .note-day {
+        position: absolute;
+        z-index: 999;
+        color: rgb(63, 3, 67);
+        margin-top: 32px;
+        margin-right: 60px;
+        font-size: 16px;
+    }
+    
+    .note-year {
+        position: absolute;
+        z-index: 999;
+        margin-top: 52px;
+        margin-left: -60px;
+        color: rgb(63, 3, 67);
+        font-size: 16px;
+    }
+    .time {
+        padding-top: 35px;
+        font-size: 14px;
+        text-align: right;
+        margin-left: 10px;
+    }
+}
+
+.date-container {
+    height: 100%;
+    padding: 10px;
+}
+
+.calendar-icon {
+    font-size: 82px;
+    color: rgb(63, 3, 67);
+}
+
+.note-date {
+    position: absolute;
+    color: rgb(63, 3, 67);
+    z-index: 999;
+    margin-right: 30px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.note-day {
+    position: absolute;
+    z-index: 999;
+    color: rgb(63, 3, 67);
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.note-year {
+    position: absolute;
+    z-index: 999;
+    margin-top: 50px;
+    margin-right: 2px;
+    color: rgb(63, 3, 67);
+    font-size: 16px;
+}
+
+.note-btn {
+    background-image: linear-gradient(to right, rgb(220, 153, 220), rgb(124, 201, 201), rgb(118, 215, 175));
+    color: rgb(243, 227, 230);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    padding: 20px;
+    margin-top: 8px;
+    width: 54%;
+    font-size: 25px;
+    overflow-wrap: break-word;
+    box-shadow: 2px 5px 4px rgb(160, 159, 159);
+}
+
+.notes-title {
+    font-size: 23px;
+}
+
+.notes-note {
+    font-size: 16px;
+}
+
+.vertical-line {
+    width: 2px;
+    border: 1.5px solid rgb(63, 3, 67);
+    color: #c4c3c3;
+    margin-right: 10px;
+    border-radius: 40px
+}
+
+.time {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.delete-btn {
+    color: #fff6e8;
+    border: 0px;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 120px;
+    margin-left: 2px;
+}
+
+.trash-icon {
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 3px;
+    border-radius: 50%;
+    color: rgb(63, 6, 67);
+}
+
+.trash-icon:hover {
+    background-color: rgb(63, 6, 67);
+    color: #fff6e8;
+}
+
+
+.title {
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #ffffff;
+}
+
+.note {
+    font-size: 17px;
+    font-family: "Roboto";
+    margin-left: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.delete-btn-con {
+    border: 2px solid black;
+}
+
+.delete-icon {
+    float: right;
+    border: 2px solid black;
+}
+
+.main-note-container {
+    background-color: rgb(63, 3, 67);
+}
+
+.note-container {
+    background-color: rgb(63, 3, 67);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 60px;
+    border: 3px solid #fff6e8;
+    margin-bottom: 40px;
+    margin-left: 15px;
+}
+
+.close-btn-container {
+    float: right;
+}
+
+.note-close {
+    font-size: 25px;
+    background-color: rgb(63, 6, 67);
+    color: #fff6e8;
+    border: 0px;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.note-close:hover {
+    background-color: #fff6e8;
+    color: rgb(63, 6, 67);
+
+}
+
+.note-heading {
+    color: #fff6e8;
+    font-family: "Dancing Script";
+    font-size: 80px;
+    letter-spacing: 10px;
+    font-weight: 1200;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.line {
+    color: #fff6e8;
+    width: 100%;
+    border: 1.4px solid #fff6e8;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.note-box {
+    background-color: #fff6e8;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: -10px;
+    justify-content: space-between;
+}
+
+.note-title {
+    color: rgb(63, 3, 67);
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.title-name {
+    color: rgb(63, 3, 67);
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 550;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 2px;
+
+}
+
+.line-2 {
+    color: rgb(63, 6, 67);
+    margin-top: 0px;
+    width: 100%;
+    border: 1.4px solid rgb(63, 6, 67);
+    border-radius: 20px;
+}
+
+.icon-container {
+    margin-left: 10px;
+}
+
+.edit-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: rgb(63, 6, 67);
+    background-color: #fff6e8;
+    padding: 10px;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    margin-right: 0px;
+}
+
+.edit-icon:hover {
+    background-color: rgb(63, 6, 67);
+    color: #fff6e8;
+}
+
+.delete-icon {
+    font-size: 20px;
+    border-radius: 50%;
+    color: rgb(63, 6, 67);
+    background-color: #fff6e8;
+    padding: 10px;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    margin-right: -30px;
+}
+
+.delete-icon:hover {
+    background-color: rgb(63, 6, 67);
+    color: #fff6e8;
+}
+
+.edit-input {
+    border: 0px;
+    background-color: #fff6e8;
+    outline: none;
+    width: 80px;
+    font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.edit-btn {
+    margin-top: 140px;
+    margin-left: 15px;
+}
+
+.save-btn-1 {
+    background-color: transparent;
+    border: 1.5px solid rgb(37, 2, 40);
+    border-radius: 10px;
+    padding: 4px;
+    width: 47px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto";
+    margin-top: 5px;
+}
+
+.trash-page {
+    height: 100%;
+    background-color: rgb(239, 239, 239);
+    padding-top: 0px;
+    min-height: 600px;
+}
+
+.deleted-notes-container {
+    background-color: rgb(239, 239, 239);
+    height: 100%;
+}
